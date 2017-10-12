@@ -39,82 +39,50 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             }
+
             @Override
             public void onPageSelected(int position) {
-                switch (
-                        position){
+                switch (position) {
                     case 0:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle_accent);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+                        updateIcons(0);
                         break;
                     case 1:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle_accent);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+                        updateIcons(1);
                         break;
                     case 2:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle_accent);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+                        updateIcons(2);
                         break;
                     case 3:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle_accent);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+                        updateIcons(3);
                         break;
                     case 4:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle_accent);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+                        updateIcons(4);
                         break;
                     case 5:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle_accent);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+                        updateIcons(5);
                         break;
                     case 6:
-                        tabLayout.getTabAt(0).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-                        tabLayout.getTabAt(6).setIcon(R.drawable.circle_accent);
+                        updateIcons(6);
                         break;
                     default:
-                        return;
+                        break;
                 }
             }
+
             @Override
             public void onPageScrollStateChanged(int state) {
 
             }
         });
+    }
+
+    private void updateIcons(int position) {
+        for (int i = 0; i < 7; i++) {
+            if (i == position)
+                tabLayout.getTabAt(0).setIcon(R.drawable.circle_accent);
+            else
+                tabLayout.getTabAt(0).setIcon(R.drawable.circle);
+        }
     }
 
 }

@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="transparent100">#00000000</color>
+    <color name="transparent50_black">#7F000000</color>
+    <color name="transparent50_white">#7Fffffff</color>
+    <color name="butons">#99bf78</color>
+    <color name="n1">#eaeaea</color>
+    <color name="n2">#e0e0e0</color>
+    <color name="n3">#dadada</color>
+    <color name="n4">#d0d0d0</color>
+    <color name="n5">#cacaca</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
 </resources>

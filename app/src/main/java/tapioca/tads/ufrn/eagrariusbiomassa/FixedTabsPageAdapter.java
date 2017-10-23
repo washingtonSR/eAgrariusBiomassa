@@ -12,10 +12,11 @@ import android.widget.Toast;
  */
 public class FixedTabsPageAdapter extends FragmentPagerAdapter {
     Context context;
-
-    public FixedTabsPageAdapter(Context contex, FragmentManager fm) {
+    CustomViewPager vp;
+    public FixedTabsPageAdapter(Context contex, FragmentManager fm, CustomViewPager vp) {
         super(fm);
         this.context=contex;
+        this.vp=vp;
     }
 
     public CharSequence getPageTitle(int position){

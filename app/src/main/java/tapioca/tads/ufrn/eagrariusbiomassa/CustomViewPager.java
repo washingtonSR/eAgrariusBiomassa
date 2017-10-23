@@ -1,6 +1,7 @@
 package tapioca.tads.ufrn.eagrariusbiomassa;
 
 import android.content.Context;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -10,19 +11,27 @@ import android.view.MotionEvent;
  */
 
 public class CustomViewPager extends ViewPager {
+    Context context;
+    int position=1,limite=2;
 
     public CustomViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.context=context;
     }
+
 
     //Aqui desativo as respostas a eventos de toque
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        return false;
+        if(position<limite){
+            return super.onTouchEvent(event);
+        }else {
+            return false;
+        }
     }
 
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent event) {
-        return false;
+    public void limitarScroll(int position, int limite){
+        this.position=position;
+        this.limite=limite;
     }
 }

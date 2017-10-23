@@ -5,32 +5,27 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     TabLayout tabLayout;
-    int currentPage;
-    boolean inibitFlag = true;
-    int maxAllowedPage = 1;
-
+    CustomViewPager vp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //Versão customizada do ViewPager, assim o swipe fica desligado
-        CustomViewPager vp = findViewById(R.id.pager);
-        PagerAdapter pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager());
+
+        vp = findViewById(R.id.pager);
+
+        PagerAdapter pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager(),vp);
         vp.setAdapter(pa);
         vp.addOnPageChangeListener(this);
+
         tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(vp);
         //Impede de clicar no seletor de tabs
-        tabLayout.clearOnTabSelectedListeners();
+//        tabLayout.clearOnTabSelectedListeners();
 
         setTabs();
     }

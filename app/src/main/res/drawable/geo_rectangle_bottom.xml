@@ -11,7 +11,7 @@
         android:left="0.5dp"
         >
         <shape android:shape="rectangle">
-            <solid android:color="@color/butons"/>
+            <solid android:color="@color/colorPrimary"/>
             <corners android:bottomLeftRadius="@dimen/radius"
                 android:bottomRightRadius="@dimen/radius"/>
         </shape>

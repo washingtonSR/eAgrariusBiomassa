@@ -3,9 +3,10 @@
     <string name="biomassa">Biomassa Econômica</string>
     <string name="continuar">Continuar</string>
     <string name="biomassa_introducao">
-        "Para fazer a previsão do potencial de criação do seu viveiro"
+        "Para que seja feita a previsão do potencial de criação do seu viveiro"
         " responda as perguntas a seguir."
-        "Caso tenha alguma dúvida aperte para ouvir um audio explicando a questão."
+        "Caso tenha alguma dúvida aperte no icone de interrogação (?) ou no botão de audio "
+        "para ouvir uma explicando sobre questão."
     </string>
     <string name="questao_01">O cuidador possui experiência com esse tipo de produção?</string>
     <string name="q_01_a">Sim</string>

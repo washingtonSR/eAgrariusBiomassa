@@ -1,21 +1,30 @@
 package tapioca.tads.ufrn.eagrariusbiomassa;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import tapioca.tads.ufrn.eagrariusbiomassa.model.Biomassa;
+
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     TabLayout tabLayout;
     CustomViewPager vp;
+    Biomassa biomassa;
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setElevation(0);
+
+        biomassa = new Biomassa();
 
         //Versão customizada do ViewPager, assim o swipe fica desligado
-
         vp = findViewById(R.id.pager);
 
         PagerAdapter pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager(),vp);
@@ -26,26 +35,25 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         tabLayout.setupWithViewPager(vp);
         //Impede de clicar no seletor de tabs
 //        tabLayout.clearOnTabSelectedListeners();
-
         setTabs();
     }
 
     private void setTabs() {
-        tabLayout.getTabAt(0).setIcon(R.drawable.circle_accent);
-        tabLayout.getTabAt(1).setIcon(R.drawable.circle);
-        tabLayout.getTabAt(2).setIcon(R.drawable.circle);
-        tabLayout.getTabAt(3).setIcon(R.drawable.circle);
-        tabLayout.getTabAt(4).setIcon(R.drawable.circle);
-        tabLayout.getTabAt(5).setIcon(R.drawable.circle);
-        tabLayout.getTabAt(6).setIcon(R.drawable.circle);
+        tabLayout.getTabAt(0).setIcon(R.drawable.geo_circle_accent);
+        tabLayout.getTabAt(1).setIcon(R.drawable.geo_circle);
+        tabLayout.getTabAt(2).setIcon(R.drawable.geo_circle);
+        tabLayout.getTabAt(3).setIcon(R.drawable.geo_circle);
+        tabLayout.getTabAt(4).setIcon(R.drawable.geo_circle);
+        tabLayout.getTabAt(5).setIcon(R.drawable.geo_circle);
+        tabLayout.getTabAt(6).setIcon(R.drawable.geo_circle);
     }
 
     public void updateIcons(int position) {
         for (int i = 0; i < 7; i++) {
             if (i == position)
-                tabLayout.getTabAt(i).setIcon(R.drawable.circle_accent);
+                tabLayout.getTabAt(i).setIcon(R.drawable.geo_circle_accent);
             else
-                tabLayout.getTabAt(i).setIcon(R.drawable.circle);
+                tabLayout.getTabAt(i).setIcon(R.drawable.geo_circle);
         }
     }
 
@@ -86,4 +94,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     public void onPageScrollStateChanged(int state) {
 
     }
+
+
 }

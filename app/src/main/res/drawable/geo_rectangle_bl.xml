@@ -2,15 +2,16 @@
     <item >
         <shape android:shape="rectangle">
             <solid android:color="#f000"/>
-            <corners android:radius="@dimen/radius"/>
+            <corners android:bottomLeftRadius="@dimen/radius"/>
         </shape>
     </item>
     <item
         android:right ="0.5dp"
-        android:bottom="0.5dp">
+        android:bottom="0.5dp"
+        android:left="0.5dp">
         <shape android:shape="rectangle">
-            <solid android:color="@color/butons"/>
-            <corners android:bottomRightRadius="@dimen/radius" />
+            <solid android:color="@color/colorPrimary"/>
+            <corners android:bottomLeftRadius="@dimen/radius" />
         </shape>
     </item>
 </layer-list>

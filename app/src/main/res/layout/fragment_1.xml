@@ -31,7 +31,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp">
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/transparent100"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_help_black_48px"
+                android:tint="@color/white" />
 
             <ImageButton
                 android:layout_width="40dp"
@@ -87,6 +96,9 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/geo_rectangle"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
                 android:text="@string/continuar" />
         </LinearLayout>
     </RelativeLayout>

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimary">#00695c</color>
+    <color name="colorPrimaryDark">#004d40</color>
+    <color name="colorAccent">#00796b</color>
+
+    <color name="transparent100">#00000000</color>
+    <color name="transparent50_black">#7F000000</color>
+    <color name="transparent50_white">#7Fffffff</color>
+    <color name="butons">#99bf78</color>
+    <color name="n1">#eaeaea</color>
+    <color name="n2">#e0e0e0</color>
+    <color name="n3">#dadada</color>
+    <color name="n4">#d0d0d0</color>
+    <color name="n5">#cacaca</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <!-- Eagrarius app -->
+    <color name="teal_900">#004d40</color>
+    <color name="teal_800">#00695c</color>
+    <color name="teal_800_opacity_40">#6600695c</color>
+    <color name="teal_700">#00796b</color>
+    <color name="teal_600">#00897b</color>
+    <color name="teal_500">#009688</color>
+    <color name="teal_400">#26a69a</color>
+    <color name="teal_300">#4db6ac</color>
+    <color name="teal_200">#80cbc4</color>
+    <color name="teal_100">#b2dfdb</color>
+    <color name="teal_50">#e0f2f1</color>
+    <color name="bt_icons">#3000695c</color>
+    <color name="menu_fundo">#00695c</color>
 </resources>

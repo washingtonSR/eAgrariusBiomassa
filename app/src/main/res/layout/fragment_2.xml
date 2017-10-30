@@ -91,6 +91,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/frag_02_bt_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/geo_circle"
@@ -99,6 +100,7 @@
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/frag_02_bt_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"

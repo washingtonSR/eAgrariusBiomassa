@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class FixedTabsPageAdapter extends FragmentPagerAdapter {
     Context context;
     CustomViewPager vp;
+    int position;
     public FixedTabsPageAdapter(Context contex, FragmentManager fm, CustomViewPager vp) {
         super(fm);
         this.context=contex;
@@ -20,6 +21,7 @@ public class FixedTabsPageAdapter extends FragmentPagerAdapter {
     }
 
     public CharSequence getPageTitle(int position){
+        this.position=position;
         switch (position){
             case 0:
                 return "";
@@ -42,6 +44,7 @@ public class FixedTabsPageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        this.position=position;
         switch (position){
             case 0:
                 return new Fragment1();
@@ -65,4 +68,5 @@ public class FixedTabsPageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 7;
     }
+
 }

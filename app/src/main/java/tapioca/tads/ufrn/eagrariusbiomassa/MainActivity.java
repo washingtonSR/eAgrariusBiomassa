@@ -7,34 +7,42 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import tapioca.tads.ufrn.eagrariusbiomassa.model.Biomassa;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
     TabLayout tabLayout;
     CustomViewPager vp;
     Biomassa biomassa;
+    Button mBtConfirmar;
+    PagerAdapter pa;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setElevation(0);
 
         biomassa = new Biomassa();
 
+        //Remove a sombra do cabeçalho
+        getSupportActionBar().setElevation(0);
         //Versão customizada do ViewPager, assim o swipe fica desligado
         vp = findViewById(R.id.pager);
 
-        PagerAdapter pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager(),vp);
+        pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager(),vp);
         vp.setAdapter(pa);
         vp.addOnPageChangeListener(this);
-
         tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(vp);
         //Impede de clicar no seletor de tabs
-//        tabLayout.clearOnTabSelectedListeners();
+        tabLayout.clearOnTabSelectedListeners();
         setTabs();
     }
 
@@ -95,5 +103,15 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     }
 
+    public void pageSelect(int page){
+        vp.setCurrentItem(page);
+    }
 
+    public Biomassa getBiomassa() {
+        return biomassa;
+    }
+
+    public void setBiomassa(Biomassa biomassa) {
+        this.biomassa = biomassa;
+    }
 }

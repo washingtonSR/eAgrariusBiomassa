@@ -87,6 +87,7 @@
             android:padding="16dp">
 
             <Button
+                android:id="@+id/frag_04_bt_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/geo_rectangle"
@@ -95,6 +96,7 @@
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/frag_04_bt_02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -104,6 +106,7 @@
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/frag_04_bt_03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

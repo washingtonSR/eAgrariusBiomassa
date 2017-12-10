@@ -68,4 +68,47 @@ public class Biomassa {
     public void setQ05(int q05) {
         this.q05 = q05;
     }
+
+    public String toString(){
+        String resultado = "Experiência: ";
+        if (q01==1){
+          resultado = resultado+"sim. ";
+        }else {
+            resultado = resultado+"não. ";
+        }
+
+        resultado = resultado+"Qual. ração: ";
+        if (q02==1){
+            resultado = resultado+"Boa. ";
+        }else if(q02==2){
+            resultado = resultado+"Comum. ";
+        }else {
+            resultado = resultado+"Ruim. ";
+        }
+
+        resultado = resultado+"Temperatura: ";
+        if (q03==1){
+            resultado = resultado+"29. ";
+        }else if(q03==2){
+            resultado = resultado+"26. ";
+        }else {
+            resultado = resultado+"23. ";
+        }
+
+        resultado = resultado+"Caract. física: ";
+        if (q04==1){
+            resultado = resultado+"Sim. ";
+        }else{
+            resultado = resultado + "Não. ";
+        }
+
+        resultado = resultado+"Caract. química: ";
+        if (q05==1){
+            resultado = resultado+"Sim. ";
+        }else{
+            resultado = resultado + "Não. ";
+        }
+
+        return resultado;
+    }
 }

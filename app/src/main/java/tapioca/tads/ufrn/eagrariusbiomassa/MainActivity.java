@@ -1,19 +1,14 @@
 package tapioca.tads.ufrn.eagrariusbiomassa;
 
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import tapioca.tads.ufrn.eagrariusbiomassa.model.Biomassa;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
@@ -36,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         //Versão customizada do ViewPager, assim o swipe fica desligado
         vp = findViewById(R.id.pager);
 
-        pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager(),vp);
+        pa = new FixedTabsPageAdapter(MainActivity.this, getSupportFragmentManager(), vp);
         vp.setAdapter(pa);
         vp.addOnPageChangeListener(this);
         tabLayout = findViewById(R.id.tab);
@@ -103,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     }
 
-    public void pageSelect(int page){
+    public void pageSelect(int page) {
         vp.setCurrentItem(page);
     }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,6 +15,7 @@
         android:background="@drawable/header">
 
         <TextView
+            android:id="@+id/textTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -33,6 +33,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="8dp"
             android:layout_marginRight="8dp">
+
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -43,6 +44,7 @@
                 android:tint="@color/white" />
 
             <ImageButton
+                android:id="@+id/buttonVoice"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@color/transparent100"
@@ -73,6 +75,7 @@
             android:src="@drawable/background_questoes" />
 
         <TextView
+            android:id="@+id/textDescricao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -99,8 +102,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/geo_rectangle"
                 android:backgroundTint="@color/colorPrimary"
-                android:textColor="@color/white"
-                android:text="@string/continuar" />
+                android:text="@string/continuar"
+                android:textColor="@color/white" />
         </LinearLayout>
     </RelativeLayout>
     <!--</android.support.v4.widget.NestedScrollView>-->

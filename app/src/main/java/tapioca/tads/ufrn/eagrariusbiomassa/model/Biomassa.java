@@ -6,8 +6,9 @@ package tapioca.tads.ufrn.eagrariusbiomassa.model;
 
 public class Biomassa {
     private float biomassa;
-    private int q01=0, q02=0, q03=0, q04=0, q05=0;
-    public Biomassa(){
+    private int q01 = 0, q02 = 0, q03 = 0, q04 = 0, q05 = 0;
+
+    public Biomassa() {
     }
 
     public Biomassa(int q01, int q02, int q03, int q04, int q05) {
@@ -18,7 +19,7 @@ public class Biomassa {
         this.q05 = q05;
     }
 
-    public void calcular(){
+    public void calcular() {
     }
 
     public float getBiomassa() {
@@ -69,43 +70,88 @@ public class Biomassa {
         this.q05 = q05;
     }
 
-    public String toString(){
+    public String[] toStringArray() {
+        String rExperiencia = "Experiência: ";
+        if (q01 == 1) {
+            rExperiencia = rExperiencia + "sim. ";
+        } else {
+            rExperiencia = rExperiencia + "não. ";
+        }
+
+        String rRacao = "Qual. ração: ";
+        if (q02 == 1) {
+            rRacao = rRacao + "Boa. ";
+        } else if (q02 == 2) {
+            rRacao = rRacao + "Comum. ";
+        } else {
+            rRacao = rRacao + "Ruim. ";
+        }
+
+        String rTemperatura = "Temperatura: ";
+        if (q03 == 1) {
+            rTemperatura = rTemperatura + "29. ";
+        } else if (q03 == 2) {
+            rTemperatura = rTemperatura + "26. ";
+        } else {
+            rTemperatura = rTemperatura + "23. ";
+        }
+
+        String rFisica = "Caract. física: ";
+        if (q04 == 1) {
+            rFisica = rFisica + "Sim. ";
+        } else {
+            rFisica = rFisica + "Não. ";
+        }
+
+        String rQuimica = "Caract. química: ";
+        if (q05 == 1) {
+            rQuimica = rQuimica + "Sim. ";
+        } else {
+            rQuimica = rQuimica + "Não. ";
+        }
+
+        String[] resultado = new String[]{rExperiencia, rRacao, rTemperatura, rFisica, rQuimica};
+        return resultado;
+
+    }
+
+    public String toString() {
         String resultado = "Experiência: ";
-        if (q01==1){
-          resultado = resultado+"sim. ";
-        }else {
-            resultado = resultado+"não. ";
+        if (q01 == 1) {
+            resultado = resultado + "sim. ";
+        } else {
+            resultado = resultado + "não. ";
         }
 
-        resultado = resultado+"Qual. ração: ";
-        if (q02==1){
-            resultado = resultado+"Boa. ";
-        }else if(q02==2){
-            resultado = resultado+"Comum. ";
-        }else {
-            resultado = resultado+"Ruim. ";
+        resultado = resultado + "Qual. ração: ";
+        if (q02 == 1) {
+            resultado = resultado + "Boa. ";
+        } else if (q02 == 2) {
+            resultado = resultado + "Comum. ";
+        } else {
+            resultado = resultado + "Ruim. ";
         }
 
-        resultado = resultado+"Temperatura: ";
-        if (q03==1){
-            resultado = resultado+"29. ";
-        }else if(q03==2){
-            resultado = resultado+"26. ";
-        }else {
-            resultado = resultado+"23. ";
+        resultado = resultado + "Temperatura: ";
+        if (q03 == 1) {
+            resultado = resultado + "29. ";
+        } else if (q03 == 2) {
+            resultado = resultado + "26. ";
+        } else {
+            resultado = resultado + "23. ";
         }
 
-        resultado = resultado+"Caract. física: ";
-        if (q04==1){
-            resultado = resultado+"Sim. ";
-        }else{
+        resultado = resultado + "Caract. física: ";
+        if (q04 == 1) {
+            resultado = resultado + "Sim. ";
+        } else {
             resultado = resultado + "Não. ";
         }
 
-        resultado = resultado+"Caract. química: ";
-        if (q05==1){
-            resultado = resultado+"Sim. ";
-        }else{
+        resultado = resultado + "Caract. química: ";
+        if (q05 == 1) {
+            resultado = resultado + "Sim. ";
+        } else {
             resultado = resultado + "Não. ";
         }
 

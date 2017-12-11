@@ -5,8 +5,8 @@
     <string name="biomassa_introducao">
         "Para que seja feita a previsão do potencial de criação do seu viveiro"
         " responda as perguntas a seguir."
-        "Caso tenha alguma dúvida aperte no icone de interrogação (?) ou no botão de audio "
-        "para ouvir uma explicando sobre questão."
+        "Caso tenha alguma dúvida aperte no icone de interrogação (?) ou no botão de áudio "
+        "para ouvir uma explicação sobre questão."
     </string>
     <string name="questao_01">O cuidador possui experiência com esse tipo de produção?</string>
     <string name="q_01_a">Sim</string>

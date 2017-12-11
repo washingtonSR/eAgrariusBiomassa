@@ -11,6 +11,7 @@
         android:background="@drawable/header">
 
         <TextView
+            android:id="@+id/textDescricao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -39,6 +40,7 @@
                 android:tint="@color/white" />
 
             <ImageButton
+                android:id="@+id/buttonVoice"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@color/transparent100"

@@ -1,18 +1,22 @@
 package tapioca.tads.ufrn.eagrariusbiomassa;
 
 import android.graphics.PorterDuff;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import tapioca.tads.ufrn.eagrariusbiomassa.utils.TTS;
 
 
 /**
@@ -23,16 +27,24 @@ public class Fragment2 extends Fragment {
     Button mBtSim;
     @BindView(R.id.frag_02_bt_02)
     Button mBtNao;
+    @BindView(R.id.buttonVoice)
+    ImageButton mBtVoice;
+    @BindView(R.id.textDescricao)
+    TextView mTvDescricao;
     private Unbinder unbinder;
+    private TTS tts;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle b){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle b) {
         View v = inflater.inflate(R.layout.fragment_2, container, false);
         unbinder = ButterKnife.bind(this, v);
+        tts = new TTS(Locale.getDefault().getLanguage(), getContext());
         setListeners();
 //logica do fragment
         return v;
     }
-    public void setListeners(){
+
+    public void setListeners() {
         mBtSim.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -46,9 +58,10 @@ public class Fragment2 extends Fragment {
                     }
                     case MotionEvent.ACTION_UP:
                         // Your action here on button click
-                        ((MainActivity)getActivity()).onPageSelected(2);
-                        ((MainActivity)getActivity()).pageSelect(2);
-                        ((MainActivity)getActivity()).getBiomassa().setQ01(1);
+                        ((MainActivity) getActivity()).onPageSelected(2);
+                        ((MainActivity) getActivity()).pageSelect(2);
+                        ((MainActivity) getActivity()).getBiomassa().setQ01(1);
+                        tts.Flush();
                     case MotionEvent.ACTION_CANCEL: {
                         Button view = (Button) v;
                         view.getBackground().clearColorFilter();
@@ -72,9 +85,10 @@ public class Fragment2 extends Fragment {
                     }
                     case MotionEvent.ACTION_UP:
                         // Your action here on button click
-                        ((MainActivity)getActivity()).onPageSelected(2);
-                        ((MainActivity)getActivity()).pageSelect(2);
-                        ((MainActivity)getActivity()).getBiomassa().setQ01(1);
+                        ((MainActivity) getActivity()).onPageSelected(2);
+                        ((MainActivity) getActivity()).pageSelect(2);
+                        ((MainActivity) getActivity()).getBiomassa().setQ01(1);
+                        tts.Flush();
                     case MotionEvent.ACTION_CANCEL: {
                         Button view = (Button) v;
                         view.getBackground().clearColorFilter();
@@ -83,6 +97,12 @@ public class Fragment2 extends Fragment {
                     }
                 }
                 return true;
+            }
+        });
+        mBtVoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tts.Speak(mTvDescricao.getText().toString());
             }
         });
     }
